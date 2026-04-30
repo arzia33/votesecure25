@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: votesure-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: AFRICA_TALKING_API_KEY
+        sync: false
+      - key: AFRICA_TALKING_USERNAME
+        value: ARZIA
+      - key: NODE_ENV
+        value: production
